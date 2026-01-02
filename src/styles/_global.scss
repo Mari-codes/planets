@@ -1,0 +1,28 @@
+@use './variables' as vars;
+
+:root {
+  --btn-active-mercury: #{vars.$mercury};
+  --btn-active-venus: #{vars.$venus};
+  --btn-active-earth: #{vars.$earth};
+  --btn-active-mars: #{vars.$mars};
+  --btn-active-jupiter: #{vars.$jupiter};
+  --btn-active-saturn: #{vars.$saturn};
+  --btn-active-uranus: #{vars.$uranus};
+  --btn-active-neptune: #{vars.$neptune};
+
+  --btn-inactive-bg: #{vars.$dark-blue};
+  --btn-inactive-border: #{vars.$neutral-700};
+}
+
+body {
+  font-family: vars.$font-body;
+  background: vars.$dark-blue;
+  color: vars.$white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: vars.$font-heading;
+}
