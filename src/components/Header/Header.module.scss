@@ -1,0 +1,9 @@
+@use '../../styles/variables' as vars;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 35px 27px;
+  border-bottom: 1px solid vars.$neutral-700;
+}
