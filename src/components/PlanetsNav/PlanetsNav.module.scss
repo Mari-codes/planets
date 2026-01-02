@@ -1,0 +1,21 @@
+@use '../../styles/variables' as vars;
+
+.planets-nav {
+  font-family: vars.$font-body;
+  font-size: vars.$heading-3;
+  color: vars.$neutral-400;
+  font-weight: vars.$spartan-bold;
+
+  &__list {
+    display: flex;
+    gap: 33px;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:hover {
+      color: vars.$white;
+    }
+  }
+}
