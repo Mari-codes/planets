@@ -1,0 +1,6 @@
+@use '../../styles/variables' as vars;
+
+.logo {
+  font-size: vars.$logo;
+  font-family: vars.$font-heading;
+}
