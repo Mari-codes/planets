@@ -5,6 +5,7 @@ export interface PlanetSection {
 
 export interface Planet {
   name: string;
+  color: string;
   overview: PlanetSection;
   structure: PlanetSection;
   geology: PlanetSection;
