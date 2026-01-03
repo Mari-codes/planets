@@ -1,0 +1,28 @@
+@use '../../styles/variables' as vars;
+
+.stat {
+  width: 255px;
+  height: 128px;
+  border: 1px solid rgba(vars.$white, 0.2);
+  padding: 20px 23px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+
+  &__label {
+    font-family: vars.$font-body;
+    font-size: vars.$heading-4;
+    color: vars.$neutral-400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &__value {
+    font-family: vars.$font-heading;
+    font-size: vars.$heading-2;
+    color: vars.$white;
+    text-transform: uppercase;
+  }
+}
