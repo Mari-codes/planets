@@ -9,13 +9,73 @@
   &__list {
     display: flex;
     gap: 33px;
+    list-style: none;
   }
 
   &__item {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
 
-    &:hover {
-      color: vars.$white;
+    $planet-colors: (
+      'mercury': vars.$mercury,
+      'venus': vars.$venus,
+      'earth': vars.$earth,
+      'mars': vars.$mars,
+      'jupiter': vars.$jupiter,
+      'saturn': vars.$saturn,
+      'uranus': vars.$uranus,
+      'neptune': vars.$neptune,
+    );
+
+    @each $name, $color in $planet-colors {
+      &[style*='--planet-color-name: #{$name}'] {
+        .planets-nav__bullet {
+          background-color: $color;
+        }
+
+        &:hover {
+          &::before {
+            content: '';
+            position: absolute;
+            top: -33px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $color;
+          }
+          .planets-nav__link {
+            color: vars.$white;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: color 0.2s;
+  }
+
+  &__bullet {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .planets-nav {
+    &__bullet {
+      display: block;
+    }
+    &__list {
+      flex-direction: column;
     }
   }
 }
