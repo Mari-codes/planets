@@ -1,0 +1,56 @@
+@use '../../styles/variables' as vars;
+
+.button {
+  width: 350px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: vars.$heading-3;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0px 28px;
+  font-family: vars.$font-body;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  margin-top: 16px;
+
+  &__number {
+    margin-right: 25px;
+    color: vars.$white;
+  }
+
+  &.isActive {
+    &[style*='--planet-color: mercury'] {
+      background-color: vars.$mercury;
+    }
+    &[style*='--planet-color: venus'] {
+      background-color: vars.$venus;
+    }
+    &[style*='--planet-color: earth'] {
+      background-color: vars.$earth;
+    }
+    &[style*='--planet-color: mars'] {
+      background-color: vars.$mars;
+    }
+    &[style*='--planet-color: jupiter'] {
+      background-color: vars.$jupiter;
+    }
+    &[style*='--planet-color: saturn'] {
+      background-color: vars.$saturn;
+    }
+    &[style*='--planet-color: uranus'] {
+      background-color: vars.$uranus;
+    }
+    &[style*='--planet-color: neptune'] {
+      background-color: vars.$neptune;
+    }
+
+    border-color: transparent;
+  }
+
+  &:hover:not(.isActive) {
+    background-color: vars.$neutral-700;
+  }
+}
