@@ -1,0 +1,59 @@
+@use '../../styles/variables' as vars;
+
+.planet {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0 126px;
+  }
+
+  &__title {
+    font-size: vars.$heading-1;
+    margin-bottom: 23px;
+  }
+
+  &__description {
+    line-height: 1.5;
+    width: 350px;
+    height: 150px;
+    margin-bottom: 24px;
+    color: vars.$neutral-400;
+  }
+
+  &__source {
+    font-family: vars.$font-body;
+    font-size: vars.$body;
+    color: vars.$neutral-400;
+    display: flex;
+    gap: 5px;
+  }
+
+  &__image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  &__img {
+    height: auto;
+
+    &--geology {
+      position: absolute;
+      top: 60%;
+      width: 163px;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+}
