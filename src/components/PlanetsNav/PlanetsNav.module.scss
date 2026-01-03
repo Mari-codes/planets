@@ -6,6 +6,13 @@
   color: vars.$neutral-400;
   font-weight: vars.$spartan-bold;
 
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
   &__list {
     display: flex;
     gap: 33px;
@@ -67,15 +74,76 @@
     height: 20px;
     border-radius: 50%;
   }
+
+  &__chevron {
+    display: none;
+    width: 4px;
+    height: 8px;
+    border-top: 2px solid vars.$white;
+    border-right: 2px solid vars.$white;
+    transform: rotate(45deg);
+    opacity: 0.4;
+  }
 }
 
 @media (max-width: 767px) {
   .planets-nav {
+    &__toggle {
+      display: block;
+    }
+
+    &__list {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100vh - 68px);
+      z-index: 100;
+      padding: 24px;
+      flex-direction: column;
+      gap: 0;
+      background-color: vars.$dark-blue;
+
+      &.is-open {
+        display: flex;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      border-bottom: 1px solid rgba(vars.$white, 0.1);
+      padding: 20px 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &::before {
+        display: none !important;
+      }
+    }
+
+    &__link {
+      width: 100%;
+      justify-content: space-between;
+      font-size: 15px;
+      letter-spacing: 1.3px;
+    }
+
+    &__left-content {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
     &__bullet {
       display: block;
     }
-    &__list {
-      flex-direction: column;
+
+    &__chevron {
+      display: block;
     }
   }
 }
