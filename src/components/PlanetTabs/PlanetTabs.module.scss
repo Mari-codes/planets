@@ -1,0 +1,54 @@
+@use '../../styles/variables' as vars;
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgba(vars.$white, 0.2);
+  padding: 0 24px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &__btn {
+    background: transparent;
+    border: none;
+    color: vars.$neutral-400;
+    font-family: vars.$font-body;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+
+    $planet-colors: (
+      'mercury': vars.$mercury,
+      'venus': vars.$venus,
+      'earth': vars.$earth,
+      'mars': vars.$mars,
+      'jupiter': vars.$jupiter,
+      'saturn': vars.$saturn,
+      'uranus': vars.$uranus,
+      'neptune': vars.$neptune,
+    );
+
+    @each $name, $color in $planet-colors {
+      &[data-planet='#{$name}'].isActive {
+        color: vars.$white;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background-color: $color;
+        }
+      }
+    }
+  }
+}
