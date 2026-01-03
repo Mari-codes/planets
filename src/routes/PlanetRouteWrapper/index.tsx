@@ -1,6 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { planets } from '../../data/planets';
-import PlanetPage from '../../pages/PlanetPage';
+import { PlanetPage } from '@/pages/PlanetPage';
 
 const PlanetRouteWrapper = () => {
   const { name } = useParams();

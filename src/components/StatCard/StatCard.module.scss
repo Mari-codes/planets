@@ -24,5 +24,42 @@
     font-size: vars.$heading-2;
     color: vars.$white;
     text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1400px) {
+  .stat {
+    width: 100%;
+    max-width: 191px;
+    height: 88px;
+    padding: 16px;
+
+    &__label {
+      font-size: 8px;
+    }
+
+    &__value {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .stat {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .stat {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__value {
+      font-size: 20px;
+    }
   }
 }

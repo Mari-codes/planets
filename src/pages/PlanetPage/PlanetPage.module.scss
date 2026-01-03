@@ -42,7 +42,11 @@
   }
 
   &__img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
+    object-fit: contain;
 
     &--geology {
       position: absolute;
@@ -55,5 +59,133 @@
     display: flex;
     gap: 30px;
     padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .planet {
+    &__container {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 800px;
+      align-items: flex-end;
+    }
+
+    &__description {
+      width: 339px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    &__image-container {
+      margin-bottom: 40px;
+      height: 422px;
+      flex: none;
+    }
+
+    &__stats {
+      justify-content: center;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .planet {
+    &__info {
+      max-width: none;
+    }
+
+    &__stats {
+      max-width: none;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .planet {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__description {
+      font-size: 11px;
+      height: 110px;
+      width: 300px;
+    }
+
+    &_source {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .planet {
+    &__container {
+      padding: 80px 0px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__info {
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    &__source {
+      justify-content: center;
+    }
+
+    &__image-container {
+      height: 300px;
+    }
+
+    &__img {
+      &--geology {
+        width: 120px;
+      }
+    }
+
+    &__stats {
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      padding: 0 24px 40px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .planet {
+    &__container {
+      padding: 40px 0px;
+    }
+    &__image-container {
+      height: 200px;
+    }
+
+    &__img {
+      &--geology {
+        width: 80px;
+        top: 55%;
+      }
+    }
   }
 }

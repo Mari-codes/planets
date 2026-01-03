@@ -4,8 +4,9 @@ import { TabButton } from '../../components/TabButton';
 import icon from '../../assets/icons/icon-source.svg';
 import { StatCard } from '../../components/StatCard';
 import type { PlanetPageProps, Tab } from './types';
+import { PlanetTabs } from '@/components/PlanetTabs';
 
-const PlanetPage = ({ planet }: PlanetPageProps) => {
+export const PlanetPage = ({ planet }: PlanetPageProps) => {
   const [currentTab, setCurrentTab] = useState<Tab>('overview');
 
   const getContent = () => {
@@ -24,6 +25,11 @@ const PlanetPage = ({ planet }: PlanetPageProps) => {
 
   return (
     <main className={styles.planet}>
+      <PlanetTabs
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+        planetColor={planetNameLow}
+      />
       <div className={styles.planet__container}>
         <div className={styles['planet__image-container']}>
           <img
@@ -92,5 +98,3 @@ const PlanetPage = ({ planet }: PlanetPageProps) => {
     </main>
   );
 };
-
-export default PlanetPage;

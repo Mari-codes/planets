@@ -7,3 +7,16 @@
   padding: 22px 35px 27px;
   border-bottom: 1px solid vars.$neutral-700;
 }
+
+@media (max-width: 1400px) {
+  .header {
+    flex-direction: column;
+    gap: 39px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: row;
+  }
+}
