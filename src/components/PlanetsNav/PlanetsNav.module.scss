@@ -1,4 +1,4 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as vars;
 
 .planets-nav {
   font-family: vars.$font-body;
@@ -11,12 +11,35 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    @include vars.tablet {
+      display: block;
+    }
   }
 
   &__list {
     display: flex;
     gap: vars.$gap-ml;
     list-style: none;
+
+    @include vars.tablet {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100vh - 68px);
+      z-index: 100;
+      padding: 24px;
+      flex-direction: column;
+      gap: 0;
+      background-color: vars.$dark-blue;
+
+      &.is-open {
+        display: flex;
+      }
+    }
   }
 
   &__item {
@@ -57,61 +80,8 @@
         }
       }
     }
-  }
 
-  &__link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    gap: vars.$gap-md;
-    transition: color 0.2s;
-  }
-
-  &__bullet {
-    display: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-
-  &__chevron {
-    display: none;
-    width: 4px;
-    height: 8px;
-    border-top: 2px solid vars.$white;
-    border-right: 2px solid vars.$white;
-    transform: rotate(45deg);
-    opacity: 0.4;
-  }
-}
-
-@media (max-width: vars.$bp-tablet) {
-  .planets-nav {
-    &__toggle {
-      display: block;
-    }
-
-    &__list {
-      display: none;
-      position: fixed;
-      top: 68px;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: calc(100vh - 68px);
-      z-index: 100;
-      padding: 24px;
-      flex-direction: column;
-      gap: 0;
-      background-color: vars.$dark-blue;
-
-      &.is-open {
-        display: flex;
-      }
-    }
-
-    &__item {
+    @include vars.tablet {
       width: 100%;
       border-bottom: 1px solid rgba(vars.$white, 0.1);
       padding: 20px 0;
@@ -124,26 +94,54 @@
         display: none !important;
       }
     }
+  }
 
-    &__link {
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: vars.$gap-md;
+    transition: color 0.2s;
+
+    @include vars.tablet {
       width: 100%;
       justify-content: space-between;
       font-size: 15px;
       letter-spacing: 1.3px;
     }
+  }
 
-    &__left-content {
+  &__bullet {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    @include vars.tablet {
+      display: block;
+    }
+  }
+
+  &__chevron {
+    display: none;
+    width: 4px;
+    height: 8px;
+    border-top: 2px solid vars.$white;
+    border-right: 2px solid vars.$white;
+    transform: rotate(45deg);
+    opacity: 0.4;
+
+    @include vars.tablet {
+      display: block;
+    }
+  }
+
+  &__left-content {
+    @include vars.tablet {
       display: flex;
       align-items: center;
       gap: vars.$gap-md;
-    }
-
-    &__bullet {
-      display: block;
-    }
-
-    &__chevron {
-      display: block;
     }
   }
 }

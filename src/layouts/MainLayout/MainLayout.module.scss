@@ -1,4 +1,4 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as vars;
 
 .main-layout {
   display: flex;
@@ -14,36 +14,20 @@
     flex: 1;
     z-index: 2;
     padding: 0px 165px;
-  }
-}
 
-@media (max-width: vars.$bp-large) {
-  .main-layout {
-    &__content {
+    @include vars.large {
       padding: 0px 140px;
     }
-  }
-}
 
-@media (max-width: vars.$bp-medium-high) {
-  .main-layout {
-    &__content {
+    @include vars.medium-high {
       padding: 0px 80px;
     }
-  }
-}
 
-@media (max-width: vars.$bp-medium) {
-  .main-layout {
-    &__content {
+    @include vars.medium {
       padding: 0px 60px;
     }
-  }
-}
 
-@media (max-width: vars.$bp-tablet) {
-  .main-layout {
-    &__content {
+    @include vars.tablet {
       padding: 0px;
     }
   }

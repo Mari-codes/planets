@@ -1,4 +1,4 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as vars;
 
 .stat {
   width: 255px;
@@ -11,12 +11,34 @@
   justify-content: center;
   gap: vars.$gap-xs;
 
+  @include vars.x-large {
+    width: 100%;
+    max-width: 191px;
+    height: 88px;
+    padding: 16px;
+  }
+
+  @include vars.large {
+    width: 100%;
+    max-width: none;
+  }
+
+  @include vars.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__label {
     font-family: vars.$font-body;
     font-size: vars.$heading-4;
     color: vars.$neutral-400;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+
+    @include vars.x-large {
+      font-size: 8px;
+    }
   }
 
   &__value {
@@ -25,40 +47,12 @@
     color: vars.$white;
     text-transform: uppercase;
     white-space: nowrap;
-  }
-}
 
-@media (max-width: vars.$bp-xlarge) {
-  .stat {
-    width: 100%;
-    max-width: 191px;
-    height: 88px;
-    padding: 16px;
-
-    &__label {
-      font-size: 8px;
-    }
-
-    &__value {
+    @include vars.x-large {
       font-size: 24px;
     }
-  }
-}
 
-@media (max-width: vars.$bp-large) {
-  .stat {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-@media (max-width: vars.$bp-tablet) {
-  .stat {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    &__value {
+    @include vars.tablet {
       font-size: 20px;
     }
   }

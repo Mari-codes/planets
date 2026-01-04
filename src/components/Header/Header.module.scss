@@ -1,4 +1,4 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as vars;
 
 .header {
   display: flex;
@@ -6,17 +6,13 @@
   align-items: center;
   padding: 22px 35px 27px;
   border-bottom: 1px solid vars.$neutral-700;
-}
 
-@media (max-width: vars.$bp-xlarge) {
-  .header {
+  @include vars.x-large {
     flex-direction: column;
     gap: vars.$gap-lg;
   }
-}
 
-@media (max-width: vars.$bp-tablet) {
-  .header {
+  @include vars.tablet {
     flex-direction: row;
     padding: 20px 25px;
   }

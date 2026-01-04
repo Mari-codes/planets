@@ -1,4 +1,4 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as vars;
 
 .planet {
   display: flex;
@@ -11,6 +11,24 @@
     align-items: center;
     padding: 80px 0px;
     gap: vars.$gap-xl;
+
+    @include vars.x-large {
+      padding: 45px 0px 35px;
+      flex-direction: column;
+      gap: vars.$gap-lg;
+    }
+
+    @include vars.medium {
+      gap: vars.$gap-xl;
+    }
+
+    @include vars.tablet {
+      gap: 24px;
+    }
+
+    @include vars.mobile {
+      padding: 40px 0px;
+    }
   }
 
   &__info {
@@ -18,11 +36,32 @@
     max-width: 350px;
     display: flex;
     flex-direction: column;
+
+    @include vars.x-large {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 800px;
+      align-items: flex-end;
+    }
+
+    @include vars.large {
+      max-width: none;
+    }
+
+    @include vars.tablet {
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__title {
     font-size: vars.$heading-1;
     margin-bottom: 23px;
+
+    @include vars.medium {
+      font-size: 48px;
+    }
   }
 
   &__description {
@@ -31,6 +70,22 @@
     height: 150px;
     margin-bottom: 24px;
     color: vars.$neutral-400;
+
+    @include vars.x-large {
+      width: 339px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    @include vars.medium {
+      font-size: vars.$heading-4;
+      height: 110px;
+      width: 300px;
+    }
+
+    @include vars.tablet {
+      text-align: center;
+    }
   }
 
   &__source {
@@ -39,6 +94,14 @@
     color: vars.$neutral-400;
     display: flex;
     gap: vars.$gap-xs;
+
+    @include vars.medium {
+      font-size: vars.$heading-3;
+    }
+
+    @include vars.tablet {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -57,6 +120,16 @@
     max-width: none;
     min-width: 0;
     flex: 1;
+
+    @include vars.x-large {
+      margin-bottom: 20px;
+      height: 350px;
+      flex: none;
+    }
+
+    @include vars.tablet {
+      height: 250px;
+    }
   }
 
   &__img {
@@ -66,40 +139,114 @@
 
     &--mercury {
       width: 290px;
+
+      @include vars.x-large {
+        width: 184px;
+      }
+
+      @include vars.tablet {
+        width: 111px;
+      }
     }
 
     &--venus {
       width: 400px;
+
+      @include vars.x-large {
+        width: 253px;
+      }
+
+      @include vars.tablet {
+        width: 154px;
+      }
     }
 
     &--earth {
       width: 450px;
+
+      @include vars.x-large {
+        width: 285px;
+      }
+
+      @include vars.tablet {
+        width: 173px;
+      }
     }
 
     &--mars {
       width: 336px;
+
+      @include vars.x-large {
+        width: 213px;
+      }
+
+      @include vars.tablet {
+        width: 129px;
+      }
     }
 
     &--jupiter {
       width: 582px;
+
+      @include vars.x-large {
+        width: 369px;
+      }
+
+      @include vars.tablet {
+        width: 224px;
+      }
     }
 
     &--saturn {
       max-width: 666px;
+
+      @include vars.x-large {
+        width: 422px;
+      }
+
+      @include vars.tablet {
+        width: 256px;
+        max-width: 256px;
+      }
     }
 
     &--uranus {
       width: 280px;
+
+      @include vars.x-large {
+        width: 290px;
+      }
+
+      @include vars.tablet {
+        width: 176px;
+      }
     }
 
     &--neptune {
       width: 280px;
+
+      @include vars.x-large {
+        width: 285px;
+      }
+
+      @include vars.tablet {
+        width: 173px;
+      }
     }
 
     &--geology {
       position: absolute;
       top: 60%;
       width: 163px;
+      @include vars.x-large {
+        width: 120px;
+      }
+      @include vars.tablet {
+        width: 80px;
+      }
+      @include vars.mobile {
+        top: 55%;
+      }
     }
   }
 
@@ -107,187 +254,29 @@
     display: flex;
     gap: vars.$gap-ml;
     padding-bottom: 10px;
-  }
-}
 
-@media (max-width: vars.$bp-xlarge) {
-  .planet {
-    &__container {
-      padding: 45px 0px 35px;
-      flex-direction: column;
-      gap: vars.$gap-lg;
-    }
-
-    &__info {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 800px;
-      align-items: flex-end;
-    }
-
-    &__description {
-      width: 339px;
-      text-align: left;
-      margin-bottom: 0;
-    }
-
-    &__image-container {
-      margin-bottom: 20px;
-      height: 350px;
-      flex: none;
-    }
-
-    &__img {
-      &--mercury {
-        width: 184px;
-      }
-      &--venus {
-        width: 253px;
-      }
-      &--earth {
-        width: 285px;
-      }
-      &--mars {
-        width: 213px;
-      }
-      &--jupiter {
-        width: 369px;
-      }
-      &--saturn {
-        width: 422px;
-      }
-      &--uranus {
-        width: 290px;
-      }
-      &--neptune {
-        width: 285px;
-      }
-      &--geology {
-        width: 120px;
-      }
-    }
-
-    &__stats {
+    @include vars.x-large {
       justify-content: center;
       max-width: 800px;
       width: 100%;
       margin: 0 auto;
     }
-  }
-}
 
-@media (max-width: vars.$bp-large) {
-  .planet {
-    &__info {
-      max-width: none;
-    }
-
-    &__stats {
+    @include vars.large {
       max-width: none;
       margin: 0;
     }
-  }
-}
 
-@media (max-width: vars.$bp-medium) {
-  .planet {
-    &__container {
-      gap: vars.$gap-xl;
-    }
-
-    &__title {
-      font-size: 48px;
-    }
-
-    &__description {
-      font-size: vars.$heading-4;
-      height: 110px;
-      width: 300px;
-    }
-
-    &__source {
-      font-size: vars.$heading-3;
-    }
-  }
-}
-
-@media (max-width: vars.$bp-tablet) {
-  .planet {
-    &__container {
-      gap: 24px;
-    }
-    &__menu {
-      display: none;
-    }
-
-    &__info {
-      justify-content: center;
-      text-align: center;
-    }
-
-    &__description {
-      text-align: center;
-    }
-
-    &__source {
-      justify-content: center;
-    }
-
-    &__image-container {
-      height: 250px;
-    }
-
-    &__img {
-      &--mercury {
-        width: 111px;
-      }
-      &--venus {
-        width: 154px;
-      }
-      &--earth {
-        width: 173px;
-      }
-      &--mars {
-        width: 129px;
-      }
-      &--jupiter {
-        width: 224px;
-      }
-      &--saturn {
-        width: 256px;
-        max-width: 256px;
-      }
-      &--uranus {
-        width: 176px;
-      }
-      &--neptune {
-        width: 173px;
-      }
-      &--geology {
-        width: 80px;
-      }
-    }
-
-    &__stats {
+    @include vars.tablet {
       flex-direction: column;
       gap: vars.$gap-sm;
       width: 100%;
     }
   }
-}
 
-@media (max-width: vars.$bp-mobile) {
-  .planet {
-    &__container {
-      padding: 40px 0px;
-    }
-
-    &__img {
-      &--geology {
-        top: 55%;
-      }
+  &__menu {
+    @include vars.tablet {
+      display: none;
     }
   }
 }

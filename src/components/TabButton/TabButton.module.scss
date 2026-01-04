@@ -1,4 +1,4 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as vars;
 
 .button {
   max-width: 350px;
@@ -18,12 +18,18 @@
   cursor: pointer;
   margin-top: 16px;
 
+  @include vars.medium {
+    font-size: 9px;
+  }
+
   &__number {
     margin-right: 25px;
     color: vars.$white-50;
   }
 
   &.isActive {
+    border-color: transparent;
+
     &[style*='--planet-color: mercury'] {
       background-color: vars.$mercury;
     }
@@ -48,17 +54,9 @@
     &[style*='--planet-color: neptune'] {
       background-color: vars.$neptune;
     }
-
-    border-color: transparent;
   }
 
   &:hover:not(.isActive) {
     background-color: vars.$neutral-700;
-  }
-}
-
-@media (max-width: vars.$bp-medium) {
-  .button {
-    font-size: 9px;
   }
 }

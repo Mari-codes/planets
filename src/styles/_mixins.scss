@@ -1,0 +1,33 @@
+@forward './variables';
+@use './variables' as vars;
+
+@mixin x-large {
+  @media (max-width: vars.$bp-xlarge) {
+    @content;
+  }
+}
+@mixin large {
+  @media (max-width: vars.$bp-large) {
+    @content;
+  }
+}
+@mixin medium-high {
+  @media (max-width: vars.$bp-medium-high) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (max-width: vars.$bp-medium) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: vars.$bp-tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: vars.$bp-mobile) {
+    @content;
+  }
+}
