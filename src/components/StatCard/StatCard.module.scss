@@ -9,7 +9,7 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  gap: 4px;
+  gap: vars.$gap-xs;
 
   &__label {
     font-family: vars.$font-body;

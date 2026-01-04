@@ -11,7 +11,7 @@
   font-size: vars.$heading-3;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  color: vars.$white;
   padding: 0px 28px;
   font-family: vars.$font-body;
   letter-spacing: 2.5px;
@@ -20,7 +20,7 @@
 
   &__number {
     margin-right: 25px;
-    color: #ffffff80;
+    color: vars.$white-50;
   }
 
   &.isActive {

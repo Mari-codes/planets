@@ -15,7 +15,7 @@
 
   &__list {
     display: flex;
-    gap: 33px;
+    gap: vars.$gap-ml;
     list-style: none;
   }
 
@@ -64,7 +64,7 @@
     color: inherit;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: vars.$gap-md;
     transition: color 0.2s;
   }
 
@@ -135,7 +135,7 @@
     &__left-content {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: vars.$gap-md;
     }
 
     &__bullet {

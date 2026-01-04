@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 80px 0px;
-    gap: 90px;
+    gap: vars.$gap-xl;
   }
 
   &__info {
@@ -38,13 +38,13 @@
     font-size: vars.$body;
     color: vars.$neutral-400;
     display: flex;
-    gap: 5px;
+    gap: vars.$gap-xs;
   }
 
   &__link {
     display: flex;
-    gap: 5px;
-    color: #ffffff80;
+    gap: vars.$gap-xs;
+    color: vars.$white-50;
   }
 
   &__image-container {
@@ -105,7 +105,7 @@
 
   &__stats {
     display: flex;
-    gap: 30px;
+    gap: vars.$gap-ml;
     padding-bottom: 10px;
   }
 }
@@ -115,7 +115,7 @@
     &__container {
       padding: 45px 0px 35px;
       flex-direction: column;
-      gap: 40px;
+      gap: vars.$gap-lg;
     }
 
     &__info {
@@ -194,7 +194,7 @@
 @media (max-width: vars.$bp-medium) {
   .planet {
     &__container {
-      gap: 95px;
+      gap: vars.$gap-xl;
     }
 
     &__title {
@@ -202,13 +202,13 @@
     }
 
     &__description {
-      font-size: 11px;
+      font-size: vars.$heading-4;
       height: 110px;
       width: 300px;
     }
 
     &__source {
-      font-size: 12px;
+      font-size: vars.$heading-3;
     }
   }
 }
@@ -272,7 +272,7 @@
 
     &__stats {
       flex-direction: column;
-      gap: 8px;
+      gap: vars.$gap-sm;
       width: 100%;
     }
   }

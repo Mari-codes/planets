@@ -11,7 +11,7 @@
 @media (max-width: vars.$bp-xlarge) {
   .header {
     flex-direction: column;
-    gap: 39px;
+    gap: vars.$gap-lg;
   }
 }
 
