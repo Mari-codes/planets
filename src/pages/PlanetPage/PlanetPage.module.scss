@@ -41,6 +41,12 @@
     gap: 5px;
   }
 
+  &__link {
+    display: flex;
+    gap: 5px;
+    color: #ffffff80;
+  }
+
   &__image-container {
     position: relative;
     display: flex;

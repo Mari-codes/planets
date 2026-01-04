@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { planets } from '@/data/planets';
 import { Link } from 'react-router-dom';
 import styles from './PlanetsNav.module.scss';
-import hamburgerIcon from '@/assets/icons/icon-hamburger.svg'; // ajuste o caminho
+import hamburgerIcon from '@/assets/icons/icon-hamburger.svg';
 
 export const PlanetsNav = () => {
   const [isOpen, setIsOpen] = useState(false);

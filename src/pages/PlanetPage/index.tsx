@@ -52,13 +52,14 @@ export const PlanetPage = ({ planet }: PlanetPageProps) => {
             <h1 className={styles.planet__title}>{planet.name.toUpperCase()}</h1>
             <p className={styles.planet__description}>{activeContent.content}</p>
             <span className={styles.planet__source}>
-              Source: Wikipedia
+              Source:
               <a
                 href={activeContent.source}
                 target="_blank"
                 rel="noreferrer"
                 className={styles.planet__link}
               >
+                <span className={styles.planet__wikipedia}>Wikipedia</span>
                 <img src={icon} alt="link icon" />
               </a>
             </span>
