@@ -17,7 +17,7 @@
   }
 }
 
-@media (max-width: 1140px) {
+@media (max-width: vars.$bp-large) {
   .main-layout {
     &__content {
       padding: 0px 140px;
@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 970px) {
+@media (max-width: vars.$bp-medium-high) {
   .main-layout {
     &__content {
       padding: 0px 80px;
@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 825px) {
+@media (max-width: vars.$bp-medium) {
   .main-layout {
     &__content {
       padding: 0px 60px;
@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: vars.$bp-tablet) {
   .main-layout {
     &__content {
       padding: 0px;

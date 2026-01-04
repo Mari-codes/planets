@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: vars.$bp-xlarge) {
   .planet {
     &__container {
       padding: 45px 0px 35px;
@@ -178,7 +178,7 @@
   }
 }
 
-@media (max-width: 1140px) {
+@media (max-width: vars.$bp-large) {
   .planet {
     &__info {
       max-width: none;
@@ -191,7 +191,7 @@
   }
 }
 
-@media (max-width: 825px) {
+@media (max-width: vars.$bp-medium) {
   .planet {
     &__container {
       gap: 95px;
@@ -213,7 +213,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: vars.$bp-tablet) {
   .planet {
     &__container {
       gap: 24px;
@@ -278,7 +278,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: vars.$bp-mobile) {
   .planet {
     &__container {
       padding: 40px 0px;

@@ -8,14 +8,14 @@
   border-bottom: 1px solid vars.$neutral-700;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: vars.$bp-xlarge) {
   .header {
     flex-direction: column;
     gap: 39px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: vars.$bp-tablet) {
   .header {
     flex-direction: row;
     padding: 20px 25px;

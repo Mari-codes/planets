@@ -28,7 +28,7 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: vars.$bp-xlarge) {
   .stat {
     width: 100%;
     max-width: 191px;
@@ -45,14 +45,14 @@
   }
 }
 
-@media (max-width: 1140px) {
+@media (max-width: vars.$bp-large) {
   .stat {
     width: 100%;
     max-width: none;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: vars.$bp-tablet) {
   .stat {
     flex-direction: row;
     justify-content: space-between;

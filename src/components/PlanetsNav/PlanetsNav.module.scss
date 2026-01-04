@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: vars.$bp-tablet) {
   .planets-nav {
     &__toggle {
       display: block;

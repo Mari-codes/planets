@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-width: 825px) {
+@media (max-width: vars.$bp-medium) {
   .button {
     font-size: 9px;
   }
