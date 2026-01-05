@@ -2,9 +2,7 @@
 
 .button {
   @include vars.flex-center($justify: flex-start);
-  max-width: 350px;
-  min-width: 300px;
-  width: 100%;
+  width: 350px;
   height: 48px;
   font-size: vars.$heading-3;
   background: transparent;
