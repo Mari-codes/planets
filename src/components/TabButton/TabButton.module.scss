@@ -8,7 +8,7 @@
   height: 48px;
   font-size: vars.$heading-3;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(vars.$white, 0.2);
   color: vars.$white;
   padding: 0px 28px;
   font-family: vars.$font-body;
@@ -18,6 +18,9 @@
 
   @include vars.medium {
     font-size: 9px;
+    width: 281px;
+    height: 40px;
+    padding: 0 20px;
   }
 
   &__number {
