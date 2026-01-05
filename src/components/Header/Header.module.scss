@@ -1,9 +1,7 @@
 @use '../../styles/mixins' as vars;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include vars.flex-center($justify: space-between);
   padding: 22px 35px 27px;
   border-bottom: 1px solid vars.$neutral-700;
 

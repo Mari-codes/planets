@@ -1,14 +1,12 @@
 @use '../../styles/mixins' as vars;
 
 .stat {
+  @include vars.flex-center(column);
   width: 255px;
   height: 128px;
   border: 1px solid rgba(vars.$white, 0.2);
   padding: 20px 23px;
-  display: flex;
   flex: 1;
-  flex-direction: column;
-  justify-content: center;
   gap: vars.$gap-xs;
 
   @include vars.x-large {
@@ -24,9 +22,7 @@
   }
 
   @include vars.tablet {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include vars.flex-center($direction: row, $justify: space-between);
   }
 
   &__label {

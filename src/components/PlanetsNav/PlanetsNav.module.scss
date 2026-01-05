@@ -43,8 +43,7 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
+    @include vars.flex-center($justify: flex-start);
     position: relative;
 
     $planet-colors: (
@@ -97,10 +96,9 @@
   }
 
   &__link {
+    @include vars.flex-center($justify: flex-start);
     text-decoration: none;
     color: inherit;
-    display: flex;
-    align-items: center;
     gap: vars.$gap-md;
     transition: color 0.2s;
 
@@ -139,8 +137,7 @@
 
   &__left-content {
     @include vars.tablet {
-      display: flex;
-      align-items: center;
+      @include vars.flex-center($justify: flex-start);
       gap: vars.$gap-md;
     }
   }
