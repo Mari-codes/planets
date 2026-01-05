@@ -1,7 +1,8 @@
-@use '../../styles/mixins' as vars;
+@use '../../styles/tokens' as vars;
+@use '../../styles/mixins' as mix;
 
 .tabs {
-  @include vars.flex-center($justify: space-between);
+  @include mix.flex-center($justify: space-between);
   width: 100%;
   border-bottom: 1px solid rgba(vars.$white, 0.2);
   padding: 0 24px;

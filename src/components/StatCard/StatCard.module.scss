@@ -1,7 +1,8 @@
-@use '../../styles/mixins' as vars;
+@use '../../styles/tokens' as vars;
+@use '../../styles/mixins' as mix;
 
 .stat {
-  @include vars.flex-center(column);
+  @include mix.flex-center(column);
   width: 255px;
   height: 128px;
   border: 1px solid rgba(vars.$white, 0.2);
@@ -9,20 +10,20 @@
   flex: 1;
   gap: vars.$gap-xs;
 
-  @include vars.x-large {
+  @include mix.x-large {
     width: 100%;
     max-width: 191px;
     height: 88px;
     padding: 16px;
   }
 
-  @include vars.large {
+  @include mix.large {
     width: 100%;
     max-width: none;
   }
 
-  @include vars.tablet {
-    @include vars.flex-center($direction: row, $justify: space-between);
+  @include mix.tablet {
+    @include mix.flex-center($direction: row, $justify: space-between);
   }
 
   &__label {
@@ -32,7 +33,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
 
-    @include vars.x-large {
+    @include mix.x-large {
       font-size: 8px;
     }
   }
@@ -44,11 +45,11 @@
     text-transform: uppercase;
     white-space: nowrap;
 
-    @include vars.x-large {
+    @include mix.x-large {
       font-size: 24px;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       font-size: 20px;
     }
   }

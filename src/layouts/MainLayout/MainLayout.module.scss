@@ -1,4 +1,5 @@
-@use '../../styles/mixins' as vars;
+@use '../../styles/tokens' as vars;
+@use '../../styles/mixins' as mix;
 
 .main-layout {
   display: flex;
@@ -15,20 +16,20 @@
     z-index: 2;
     padding: 0px 165px;
 
-    @include vars.large {
+    @include mix.large {
       padding: 0px 140px;
     }
 
-    @include vars.medium-high {
+    @include mix.medium-high {
       padding: 0px 80px;
     }
 
-    @include vars.medium {
+    @include mix.medium {
       padding: 0px 60px;
     }
 
-    @include vars.tablet {
-      padding: 0px;
+    @include mix.tablet {
+      padding: 25px;
     }
   }
 }

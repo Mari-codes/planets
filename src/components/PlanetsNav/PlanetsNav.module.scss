@@ -1,4 +1,5 @@
-@use '../../styles/mixins' as vars;
+@use '../../styles/tokens' as vars;
+@use '../../styles/mixins' as mix;
 
 .planets-nav {
   font-family: vars.$font-body;
@@ -12,7 +13,7 @@
     border: none;
     cursor: pointer;
 
-    @include vars.tablet {
+    @include mix.tablet {
       display: block;
     }
   }
@@ -22,7 +23,7 @@
     gap: vars.$gap-ml;
     list-style: none;
 
-    @include vars.tablet {
+    @include mix.tablet {
       display: none;
       position: fixed;
       top: 68px;
@@ -43,7 +44,7 @@
   }
 
   &__item {
-    @include vars.flex-center($justify: flex-start);
+    @include mix.flex-center($justify: flex-start);
     position: relative;
 
     $planet-colors: (
@@ -80,7 +81,7 @@
       }
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       width: 100%;
       border-bottom: 1px solid rgba(vars.$white, 0.1);
       padding: 20px 0;
@@ -96,13 +97,13 @@
   }
 
   &__link {
-    @include vars.flex-center($justify: flex-start);
+    @include mix.flex-center($justify: flex-start);
     text-decoration: none;
     color: inherit;
     gap: vars.$gap-md;
     transition: color 0.2s;
 
-    @include vars.tablet {
+    @include mix.tablet {
       width: 100%;
       justify-content: space-between;
       font-size: 15px;
@@ -116,7 +117,7 @@
     height: 20px;
     border-radius: 50%;
 
-    @include vars.tablet {
+    @include mix.tablet {
       display: block;
     }
   }
@@ -130,14 +131,14 @@
     transform: rotate(45deg);
     opacity: 0.4;
 
-    @include vars.tablet {
+    @include mix.tablet {
       display: block;
     }
   }
 
   &__left-content {
-    @include vars.tablet {
-      @include vars.flex-center($justify: flex-start);
+    @include mix.tablet {
+      @include mix.flex-center($justify: flex-start);
       gap: vars.$gap-md;
     }
   }

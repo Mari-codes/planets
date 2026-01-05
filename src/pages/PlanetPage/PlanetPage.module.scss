@@ -1,4 +1,5 @@
-@use '../../styles/mixins' as vars;
+@use '../../styles/tokens' as vars;
+@use '../../styles/mixins' as mix;
 
 .planet {
   display: flex;
@@ -6,25 +7,25 @@
   justify-content: space-between;
 
   &__container {
-    @include vars.flex-center($justify: space-between);
+    @include mix.flex-center($justify: space-between);
     padding: 80px 0px;
     gap: vars.$gap-xl;
 
-    @include vars.x-large {
-      @include vars.flex-center(column);
+    @include mix.x-large {
+      @include mix.flex-center(column);
       padding: 45px 0px 35px;
       gap: vars.$gap-lg;
     }
 
-    @include vars.medium {
+    @include mix.medium {
       gap: vars.$gap-xl;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       gap: 24px;
     }
 
-    @include vars.mobile {
+    @include mix.mobile {
       padding: 40px 0px;
     }
   }
@@ -35,16 +36,16 @@
     display: flex;
     flex-direction: column;
 
-    @include vars.x-large {
-      @include vars.flex-center(row, space-between, flex-end);
+    @include mix.x-large {
+      @include mix.flex-center(row, space-between, flex-end);
       max-width: 800px;
     }
 
-    @include vars.large {
+    @include mix.large {
       max-width: none;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       justify-content: center;
       text-align: center;
     }
@@ -54,7 +55,7 @@
     font-size: vars.$heading-1;
     margin-bottom: 23px;
 
-    @include vars.medium {
+    @include mix.medium {
       font-size: 48px;
     }
   }
@@ -66,19 +67,19 @@
     margin-bottom: 24px;
     color: vars.$neutral-400;
 
-    @include vars.x-large {
+    @include mix.x-large {
       width: 339px;
       text-align: left;
       margin-bottom: 0;
     }
 
-    @include vars.medium {
+    @include mix.medium {
       font-size: vars.$heading-4;
       height: 110px;
       width: 300px;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       text-align: center;
     }
   }
@@ -90,11 +91,11 @@
     display: flex;
     gap: vars.$gap-xs;
 
-    @include vars.medium {
+    @include mix.medium {
       font-size: vars.$heading-3;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       justify-content: center;
     }
   }
@@ -106,7 +107,7 @@
   }
 
   &__image-container {
-    @include vars.flex-center;
+    @include mix.flex-center;
     position: relative;
     height: 550px;
     width: 100%;
@@ -114,13 +115,13 @@
     min-width: 0;
     flex: 1;
 
-    @include vars.x-large {
+    @include mix.x-large {
       margin-bottom: 20px;
       height: 350px;
       flex: none;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       height: 250px;
     }
   }
@@ -133,11 +134,11 @@
     &--mercury {
       width: 290px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 184px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 111px;
       }
     }
@@ -145,11 +146,11 @@
     &--venus {
       width: 400px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 253px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 154px;
       }
     }
@@ -157,11 +158,11 @@
     &--earth {
       width: 450px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 285px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 173px;
       }
     }
@@ -169,11 +170,11 @@
     &--mars {
       width: 336px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 213px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 129px;
       }
     }
@@ -181,11 +182,11 @@
     &--jupiter {
       width: 582px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 369px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 224px;
       }
     }
@@ -193,11 +194,11 @@
     &--saturn {
       max-width: 666px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 422px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 256px;
         max-width: 256px;
       }
@@ -206,11 +207,11 @@
     &--uranus {
       width: 280px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 290px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 176px;
       }
     }
@@ -218,11 +219,11 @@
     &--neptune {
       width: 280px;
 
-      @include vars.x-large {
+      @include mix.x-large {
         width: 285px;
       }
 
-      @include vars.tablet {
+      @include mix.tablet {
         width: 173px;
       }
     }
@@ -231,13 +232,13 @@
       position: absolute;
       top: 60%;
       width: 163px;
-      @include vars.x-large {
+      @include mix.x-large {
         width: 120px;
       }
-      @include vars.tablet {
+      @include mix.tablet {
         width: 80px;
       }
-      @include vars.mobile {
+      @include mix.mobile {
         top: 55%;
       }
     }
@@ -248,19 +249,19 @@
     gap: vars.$gap-ml;
     padding-bottom: 10px;
 
-    @include vars.x-large {
+    @include mix.x-large {
       justify-content: center;
       max-width: 800px;
       width: 100%;
       margin: 0 auto;
     }
 
-    @include vars.large {
+    @include mix.large {
       max-width: none;
       margin: 0;
     }
 
-    @include vars.tablet {
+    @include mix.tablet {
       flex-direction: column;
       gap: vars.$gap-sm;
       width: 100%;
@@ -268,7 +269,7 @@
   }
 
   &__menu {
-    @include vars.tablet {
+    @include mix.tablet {
       display: none;
     }
   }
