@@ -1,12 +1,4 @@
-@forward './variables';
-@use './variables' as vars;
-
-@mixin flex-center($direction: row, $justify: center, $align: center) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
+@use '../tokens/' as vars;
 
 @mixin x-large {
   @media (max-width: vars.$bp-xlarge) {

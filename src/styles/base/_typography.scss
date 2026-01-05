@@ -1,0 +1,12 @@
+@use '../tokens' as vars;
+
+body {
+  font-family: vars.$font-body;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: vars.$font-heading;
+}

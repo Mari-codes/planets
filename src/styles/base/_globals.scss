@@ -1,4 +1,4 @@
-@use './mixins' as vars;
+@use '../tokens' as vars;
 
 :root {
   --btn-active-mercury: #{vars.$mercury};
@@ -15,14 +15,6 @@
 }
 
 body {
-  font-family: vars.$font-body;
   background: vars.$dark-blue;
   color: vars.$white;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: vars.$font-heading;
 }
