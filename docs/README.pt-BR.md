@@ -1,6 +1,6 @@
 # The Planets
 
-> **Você sabia?** Existe uma **chance de 1 em 1000** de uma estrela cadente cruzar sua tela. Será que você fica tempo suficiente para conseguir fazer um pedido? ;)
+> **Você sabia?** Existe uma **chance de 1 em 2000** de uma estrela cadente cruzar sua tela. Será que você fica tempo suficiente para conseguir fazer um pedido? ;)
 
 ## Leia em outros idiomas
 
@@ -98,9 +98,11 @@ yarn dev
 ## Screenshots
 
 ### Visão Desktop - Terra (Visão Geral)
+
 ![Desktop Preview](../src/assets/screenshots/desktop-preview.png)
 
 ### Geologia da Superfície e Visões Responsivas
-| Tablet - Estrutura Interna | Mobile - Menu de Navegação | Detalhe de Geologia |
-| :---: | :---: | :---: |
+
+|                Tablet - Estrutura Interna                |              Mobile - Menu de Navegação              |                  Detalhe de Geologia                   |
+| :------------------------------------------------------: | :--------------------------------------------------: | :----------------------------------------------------: |
 | ![Tablet](../src/assets/screenshots/tablet-internal.png) | ![Mobile](../src/assets/screenshots/mobile-menu.png) | ![Geology](../src/assets/screenshots/geology-view.png) |

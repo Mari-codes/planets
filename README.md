@@ -1,6 +1,6 @@
 # The Planets
 
-> **Did you know?** There is a **1 in 1000 chance** of a shooting star crossing your screen. Will you stay long enough to make a wish? ;)
+> **Did you know?** There is a **1 in 2000 chance** of a shooting star crossing your screen. Will you stay long enough to make a wish? ;)
 
 ## Read this in other languages
 
@@ -93,9 +93,11 @@ yarn dev
 ## Screenshots
 
 ### Desktop - Earth (Overview)
+
 ![Desktop Preview](./src/assets/screenshots/desktop-preview.png)
 
 ### Surface Geology & Responsive Views
-| Tablet - Internal Structure | Mobile - Navigation Menu | Geology Detail |
-| :---: | :---: | :---: |
+
+|               Tablet - Internal Structure               |              Mobile - Navigation Menu               |                    Geology Detail                     |
+| :-----------------------------------------------------: | :-------------------------------------------------: | :---------------------------------------------------: |
 | ![Tablet](./src/assets/screenshots/tablet-internal.png) | ![Mobile](./src/assets/screenshots/mobile-menu.png) | ![Geology](./src/assets/screenshots/geology-view.png) |
