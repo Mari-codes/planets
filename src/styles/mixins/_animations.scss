@@ -1,0 +1,18 @@
+@keyframes softReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+    filter: blur(1px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@mixin reveal-soft($delay: 0s) {
+  opacity: 0;
+  animation: softReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: $delay;
+}
