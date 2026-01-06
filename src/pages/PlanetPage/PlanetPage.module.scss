@@ -13,7 +13,7 @@
 
     @include mix.x-large {
       @include mix.flex-center(column);
-      padding: 45px 0px 35px;
+      padding: 70px 0px 35px;
       gap: vars.$gap-lg;
     }
 
