@@ -24,7 +24,7 @@ export const PlanetPage = ({ planet }: PlanetPageProps) => {
   const planetNameLow = planet.name.toLowerCase();
 
   return (
-    <main className={styles.planet}>
+    <main className={styles.planet} key={planet.name}>
       <PlanetTabs
         currentTab={currentTab}
         setCurrentTab={setCurrentTab}
@@ -33,6 +33,7 @@ export const PlanetPage = ({ planet }: PlanetPageProps) => {
       <div className={styles.planet__container}>
         <div className={styles['planet__image-container']}>
           <img
+            key={currentTab}
             src={getImagePath()}
             alt={planet.name}
             className={`${styles.planet__img} ${styles[`planet__img--${planetNameLow}`]}`}

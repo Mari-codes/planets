@@ -31,6 +31,7 @@
   }
 
   &__info {
+    @include mix.reveal-soft(0.3s);
     width: 100%;
     max-width: 350px;
     display: flex;
@@ -108,6 +109,7 @@
 
   &__image-container {
     @include mix.flex-center;
+    @include mix.reveal-soft(0s);
     position: relative;
     height: 550px;
     width: 100%;
@@ -245,6 +247,7 @@
   }
 
   &__stats {
+    @include mix.reveal-soft(0.5s);
     display: flex;
     gap: vars.$gap-ml;
     padding-bottom: 10px;
