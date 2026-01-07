@@ -17,7 +17,7 @@ Check out the project running here: [The Planets on Vercel](https://mari-planets
 - **Dynamic Planet Data**: Detailed facts about 8 planets including overview, internal structure, and surface geology.
 - **Interactive Transitions**: Smooth animations using CSS Keyframes for content switching and "soft reveals".
 - **Dynamic Routing**: Implementation of `PlanetRouteWrapper` with `useParams` for efficient, data-driven rendering.
-- **Parallax Starfield**: A real-time **HTML5 Canvas** background featuring stars with different speeds to create depth and a rare shooting star system (0.001 probability).
+- **Parallax Starfield**: A real-time **HTML5 Canvas** background featuring stars with different speeds to create depth and a rare shooting star system (0.002 probability).
 - **Responsive Design**: Fully optimized for mobile (with a custom slide-down hamburger menu), tablet, and desktop.
 - **Themed UI**: Planet-specific color palettes generated dynamically via Sass maps and loops.
 

@@ -18,7 +18,7 @@ Veja o projeto rodando aqui:
 - **Dados Dinâmicos dos Planetas**: Fatos detalhados sobre os 8 planetas, incluindo visão geral, estrutura interna e geologia da superfície.
 - **Transições Interativas**: Animações suaves com CSS Keyframes para troca de conteúdo e “soft reveals”.
 - **Roteamento Dinâmico**: Implementação de `PlanetRouteWrapper` com `useParams` para renderização dinâmica baseada em dados.
-- **Campo de Estrelas com Parallax**: Background em **HTML5 Canvas** com estrelas em diferentes velocidades para criar profundidade, incluindo um sistema raro de estrela cadente (probabilidade: 0,001).
+- **Campo de Estrelas com Parallax**: Background em **HTML5 Canvas** com estrelas em diferentes velocidades para criar profundidade, incluindo um sistema raro de estrela cadente (probabilidade: 0,002).
 - **Design Responsivo**: Totalmente otimizado para mobile (com menu hamburguer deslizante), tablet e desktop.
 - **UI Temática**: Paletas de cores por planeta geradas dinamicamente com Sass maps e loops.
 
